@@ -1,4 +1,6 @@
-## Abstract
+## Verification of Weber's Law
+
+### Abstract
 Weber’s Law (also known as the Weber-Fechner law and Weber’s Law of Just
 Noticeable Difference) states that the just noticeable difference of stimulus intensity
 (i.e ∆ I), abbreviated as JND, is directly proportional to the original
@@ -21,7 +23,7 @@ Triangles, 2) Pentagons, 3) Heptagons, 4) Nonagons. I also intend to observe if
 increasing or decreasing the number of edges of the polygon affects the Weber’s
 constant.
 
-## Experimental Methods
+### Experimental Methods
 
 The basic experiment is laid out in bulletin points below:
 
@@ -76,3 +78,32 @@ plotting.py leverages on the pickle (serialization) objects produced by the
 experiment.py script and plots the mean values of JNDs in sizes against
 the initial signal size for each polygon.
 
+### Results
+
+The plots of the mean values of JNDs of sizes across the 10 subjects against
+the original signal value sizes are shown below. The various radius values used
+are 0.5, 1.0, 2.0, 3.5, 5.5. The error bars show standard deviation. Note that the
+scale of the y − axis is different from the x − axis.
+
+![alt text](https://github.com/ayan-al/webers-law-verification/blob/master/JND_plots.PNG)
+
+The value of Weber’s constant in each case is given by the slope of the plot. The values of k for triangles, pentagons, heptagons and nonagons are 1.0 × 10−1 , 4.2 × 10−2 , 7.5 × 10−2 and 5.3 × 10−2 respectively. Clearly, the plots confirm Weber’ Law (R2 values are given in the plot captions).
+
+Weber’s constant does differ across subjects. The plot of the Weber’s constant for each polygon and each subject against their indices (note that the indices are not in any given order; certainly not in order of the trials) is given below. There is a wide spread of Weber’s constant over the subjects.
+
+![alt text](https://github.com/ayan-al/webers-law-verification/blob/master/webers_constant_plots.PNG)
+
+Guessing or cheating was prevented in the study by modifying the staircase statement. (Explained in Experimental Procedures). Needless to say, the signal-polygon was randomly assigned to one of the sides (left or right) in every render.
+
+It is also clear that Weber’s constant varies for each polygon type. However
+it does not show any graded increase or decrease as the number of edges of the
+polygon is varied.
+
+### Discussion
+From this brief study, it is indeed clear that Weber’s law is followed in the recognition of polygon sizes. As shown, the value of Weber’s constant is different across the subjects. This obviously means that their JNDs would also be different. This is the source of noise in the data. The results were not significantly different when the experiment was done on the same subject twice (data not shown). Changing the number of edges in the polygon did change the Weber’s constant but not in any conceivable pattern. As such, no concrete reason can be attributed to this change. Also, changing the color of the polygon on the screen did not have any effect on the Weber’s constant for each polygon (data not shown). This may suggest that colour has no effect on the perception of size in the case of polygons. I cannot include myself as one of the subjects because I have written the code for the experiment! As such I am aware of the previous and the next stimulus. Not to mention I also know the method that the experiment uses to avoid random guessing. Clearly, there is a huge “Experimenter’s Bias”.
+
+### References
+
+1. https://en.wikipedia.org/wiki/WeberFechner_law
+2. www.psychopy.org
+3. Holden JK, Francisco EM, Zhang Z, Baric C, Tommerdahl M. An Undergraduate Laboratory Exercise to Study Weber’s Law. Journal of Under- graduate Neuroscience Education. 2011;9(2):A71-A74.
